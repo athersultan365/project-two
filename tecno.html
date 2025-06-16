@@ -1,0 +1,4215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .topbar {
+        width: 100%;
+        height: 50px;
+        /* border: 1px solid red; */
+        background-color: rgb(12, 90, 219);
+    }
+
+    .emailicon {
+        width: 210px;
+        height: 100%;
+        /* border: 1px solid white; */
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px;
+        margin-left: 100px;
+    }
+
+    .email,
+    .iconetext {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .map {
+        width: 210px;
+        height: 100%;
+        /* border: 1px solid white; */
+        margin-top: 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .map1,
+    .maptext {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .phone {
+        width: 160px;
+        height: 100%;
+        /* border: 1px solid white; */
+        margin-top: 15px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .phone1,
+    .phonetext {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .allicons {
+
+        width: 105px;
+        height: 50%;
+        /* border: 1px solid white; */
+        margin-top: 15px;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 400px;
+        color: white;
+        word-spacing: 10px;
+    }
+
+    .mainpic {
+        clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 88%, 70% 100%, 28% 100%, 0 88%, 0 0);
+        width: 100%;
+        height: 130vh;
+        /* border: 1px solid red; */
+        /* background-image: url(); */
+    }
+
+    .overpic {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .manubar {
+        width: 100%;
+        height: 100px;
+        /* border: 1px solid blue; */
+    }
+
+    .allmanu {
+        width: 80%;
+        height: 50px;
+        /* border: 1px solid green; */
+        margin-top: 25px;
+        margin-left: 100px;
+
+    }
+
+    .allmanu img {
+        margin-top: 5px;
+    }
+
+    .logopic,
+    .manulist,
+    .icon {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .icon {
+        width: 95px;
+        height: 20px;
+        margin-top: 10px;
+        font-size: 25px;
+        /* background-color: blue; */
+
+    }
+
+
+    .drop-down1 {
+        width: 815px;
+        height: 0px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        left: 200px;
+        top: 120px;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 0px;
+
+    }
+
+    .drop-down4 {
+        width: 1225px;
+        height: 0px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        left: 80px;
+        top: 120px;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 1px;
+
+    }
+
+    .drop-down5 {
+        width: 820px;
+        height: 0px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        left: 350px;
+        top: 120px;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 1px;
+
+    }
+
+
+
+    .drop-down2 {
+        width: 150px;
+        height: 0px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        left: 550px;
+        top: 120px;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 0px;
+
+    }
+
+    .drop-down3 {
+        width: 150px;
+        height: 0px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        left: 850px;
+        top: 120px;
+        overflow: hidden;
+        transition: 0.4s;
+        opacity: 0px;
+
+    }
+
+    .listthree {
+        width: 150px;
+        height: 120px;
+        /* border: 1px solid red; */
+        /* margin-top: 100px; */
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .listtwo {
+        width: 150px;
+        height: 350px;
+        /* border: 1px solid red; */
+        /* margin-top: 100px; */
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .listone {
+        width: 200px;
+        height: 350px;
+        /* border: 1px solid red; */
+        /* margin-top: 25px; */
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .listfive {
+        width: 200px;
+        height: 350px;
+        /* border: 1px solid red; */
+        /* margin-top: 25px; */
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .listfive ul li {
+        margin-top: 12px;
+
+    }
+
+    .listfour {
+        width: 200px;
+        height: 350px;
+        /* border: 1px solid red; */
+        /* margin-top: 25px; */
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .listfour ul li {
+        display: block;
+        /* border: 2px solid blue; */
+        /* height: 100%; */
+    }
+
+    .listone ul li {
+        margin-top: 12px;
+
+    }
+
+    .listfour ul li {
+        margin-top: 12px;
+
+    }
+
+    .listtwo ul li {
+        margin-top: 12px;
+
+    }
+
+    .listthree ul li {
+        margin-top: 12px;
+
+    }
+
+    .manulist ul li:hover .drop-down4 {
+        opacity: 1;
+        height: 220px;
+        cursor: pointer;
+    }
+
+    .manulist ul li:hover .drop-down2 {
+        opacity: 1;
+        height: 180px;
+        cursor: pointer;
+    }
+
+    .manulist ul li:hover .drop-down5 {
+        opacity: 1;
+        height: 180px;
+        cursor: pointer;
+    }
+
+
+    .manulist ul li:hover .drop-down3 {
+        opacity: 1;
+        height: 120px;
+        cursor: pointer;
+    }
+
+    .manulist ul li:hover .drop-down1 {
+        opacity: 1;
+        height: 350px;
+        cursor: pointer;
+    }
+
+    .drop-down1 ul li {
+        list-style: none;
+        margin-top: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .icon1,
+    .icon2 {
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        background-color: rgb(12, 90, 219);
+    }
+
+    .icon {
+        position: relative;
+
+    }
+
+    .count {
+        width: 20px;
+        height: 25px;
+        /* border: 1px solid black; */
+        border-radius: 20px;
+        position: absolute;
+        top: -20px;
+        left: 10;
+        color: white;
+        background-color: black;
+        padding-left: 3px;
+        padding-top: -100px;
+    }
+
+    .manulist {
+        width: 700px;
+        height: 25px;
+        /* border: 1px solid red; */
+        list-style: none;
+        margin-top: 13px;
+        margin-left: 100px
+            /* cursor: pointer; */
+    }
+
+    .lists {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .text1 {
+        width: 600px;
+        height: 250px;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: 300px;
+        left: 100px;
+        color: white;
+    }
+
+    /* ===============animation word=========================== */
+
+
+    .animationword {
+        width: 340px;
+        height: 40px;
+        /* border: 1px solid green; */
+        overflow: hidden;
+    }
+
+    .animationword p {
+        display: inline-block;
+        /* font-weight: bold; */
+        color: white;
+        animation-name: worddrop;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .oneword {
+        transform: translateY(-40px);
+        font-size: 7mm;
+    }
+
+    .oneword-o {
+        animation-delay: 0.15s;
+    }
+
+    .oneword-t {
+        animation-delay: 0.35s;
+    }
+
+    .oneword-a {
+        animation-delay: 0.55s;
+    }
+
+    .oneword-l {
+        animation-delay: 0.75s;
+    }
+
+    .oneword-i {
+        animation-delay: 0.95s;
+    }
+
+    .oneword-p {
+        animation-delay: 1.15s;
+    }
+
+    .oneword-s {
+        animation-delay: 1.35s;
+    }
+
+    .oneword-o2 {
+        animation-delay: 1.55s;
+    }
+
+    .oneword-l1 {
+        animation-delay: 1.75s;
+    }
+
+    .oneword-u {
+        animation-delay: 1.95s;
+    }
+
+    .oneword-t2 {
+        animation-delay: 2.15s;
+    }
+
+    .oneword-i2 {
+        animation-delay: 2.35s;
+    }
+
+    .oneword-o3 {
+        animation-delay: 2.55s;
+    }
+
+    .oneword-n {
+        animation-delay: 2.75s;
+    }
+
+    @keyframes worddrop {
+        from {
+            transform: translateY(-40px);
+
+        }
+
+        to {
+
+            transform: translateY(0px);
+
+
+        }
+
+    }
+
+    /* ================animation2============================= */
+
+
+    .animation2 {
+        width: 640px;
+        height: 70px;
+        /* border: 1px solid red; */
+        overflow: hidden;
+    }
+
+    .animation2 h1 {
+        display: inline-block;
+        /* font-weight: bold; */
+        color: white;
+        animation-name: word;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .word2 {
+        transform: translateY(60px);
+        font-size: 7mm;
+    }
+
+    .word2-e {
+        animation-delay: 0.15s;
+    }
+
+    .word2-s {
+        animation-delay: 0.35s;
+    }
+
+    .word2-t {
+        animation-delay: 0.55s;
+    }
+
+    .word2-i {
+        animation-delay: 0.75s;
+    }
+
+    .word2-at {
+        animation-delay: 0.95s;
+    }
+
+    .word2-sa {
+        animation-delay: 1.15s;
+    }
+
+    .word2-o {
+        animation-delay: 1.35s;
+    }
+
+    .word2-l {
+        animation-delay: 1.55s;
+    }
+
+    .word2-u {
+        animation-delay: 1.75s;
+    }
+
+    .word2-ta {
+        animation-delay: 1.95s;
+    }
+
+    .word2-ia {
+        animation-delay: 2.15s;
+    }
+
+    .word2-oa {
+        animation-delay: 2.35s;
+    }
+
+    .word2-n {
+        animation-delay: 2.55s;
+    }
+
+    .word2-a {
+        animation-delay: 2.75s;
+    }
+
+    .word2-g {
+        animation-delay: 2.95s;
+    }
+
+    .word2-ea {
+        animation-delay: 3.15s;
+    }
+
+    .word2-na {
+        animation-delay: 3.35s;
+    }
+
+    .word2-c {
+        animation-delay: 3.55s;
+    }
+
+    .word2-y {
+        animation-delay: 3.75s;
+    }
+
+    @keyframes word {
+
+
+        from {
+            transform: translateY(60px);
+
+        }
+
+        to {
+
+            transform: translateY(0px);
+
+
+        }
+
+    }
+
+    /* =====================animation 3========================== */
+
+
+
+    .animation3 {
+        width: 530px;
+        height: 70px;
+        /* border: 1px solid white; */
+        overflow: hidden;
+    }
+
+    .animation3 h1 {
+        display: inline-block;
+        /* font-weight: bold; */
+        color: white;
+        animation-name: worda2;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+
+    .word3 {
+        transform: translateY(60px);
+        font-size: 7mm;
+    }
+
+    .word3o {
+        animation-delay: 0.15s;
+    }
+
+    .word3r {
+        animation-delay: 0.35s;
+    }
+
+    .word3y {
+        animation-delay: 0.55s;
+    }
+
+    .word3oa {
+        animation-delay: 0.75s;
+    }
+
+    .word3u {
+        animation-delay: 0.95s;
+    }
+
+    .word3ra {
+        animation-delay: 1.15s;
+    }
+
+    .word3b {
+        animation-delay: 1.35s;
+    }
+
+    .word3ua {
+        animation-delay: 1.55s;
+    }
+
+    .word3s {
+        animation-delay: 1.75s;
+    }
+
+    .word3i {
+        animation-delay: 1.95s;
+    }
+
+    .word3n {
+        animation-delay: 2.15s;
+    }
+
+    .word3e {
+        animation-delay: 2.35s;
+    }
+
+    .word3sa {
+        animation-delay: 2.55s;
+    }
+
+    .word3sb {
+        animation-delay: 2.75s;
+    }
+
+    @keyframes worda2 {
+
+
+        from {
+            transform: translateY(60px);
+
+        }
+
+        to {
+
+            transform: translateY(0px);
+
+
+        }
+
+    }
+
+    .text1 p {
+        font-size: 30px;
+    }
+
+    .text1 h1 {
+
+        font-size: 50px;
+    }
+
+    .button {
+        width: 450px;
+        height: 50px;
+        margin-top: 20px;
+        /* position: absolute; */
+        /* border: 1px solid greenyellow; */
+    }
+
+    .work,
+    .solution {
+        width: 200px;
+        height: 100%;
+        border: none;
+        /* border: 1px solid white; */
+        display: inline-block;
+        vertical-align: top;
+        font-size: 20px;
+        color: white;
+    }
+
+    .solution {
+        /* border: 1px solid white; */
+        /* background-color: dimgrey; */
+        background-color: rgb(113, 113, 113);
+        margin-left: 30px;
+    }
+
+    .work {
+        background-color: rgb(12, 90, 219);
+
+    }
+
+    /* ///////////////////////////////////////////////////// */
+    .section2 {
+        width: 100%;
+        height: 140vh;
+        /* border: 1px solid green; */
+        background-color: white;
+        position: relative;
+    }
+
+    .pic-area,
+    .text-area {
+        width: 49.8%;
+        height: 650px;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 250px;
+
+    }
+
+    .text2area {
+        width: 100%;
+        height: 30%;
+        /* border: 1px solid red; */
+        margin-top: 30px;
+
+    }
+
+    .Web1,
+    .it2 {
+        margin: auto;
+        /* position: absolute; */
+        margin-left: 15px;
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .Button1 {
+        width: 200px;
+        height: 40px;
+        /* border: 1px solid gray; */
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(12, 90, 219);
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .icon3 {
+        width: 10%;
+        height: 50%;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .texticon {
+        width: 85%;
+        height: 50%;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+
+    }
+
+    .texticon p {
+        margin-top: 7px;
+    }
+
+    .animation {
+        width: 86%;
+        height: 100%;
+        /* border: 1px solid red; */
+        margin-left: 50px;
+
+    }
+
+
+    /* ///////////////////blue creicle  team animation////////////////// */
+
+    .animring {
+
+        width: 150px;
+        height: 150px;
+        /* border: 4px solid yellow; */
+        position: absolute;
+        top: 540px;
+        left: 0px;
+    }
+
+    .animring img {
+        width: 100%;
+        height: 100%;
+        /* background-color: blue; */
+        animation-name: ring2;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ring2 {
+        0% {
+            margin-top: 15px;
+        }
+
+        100% {
+            margin-top: 0px;
+        }
+
+    }
+
+    /* ///////////////////crecle animation It///////// */
+    .scrol1 {
+
+        width: 400px;
+        height: 400px;
+        /* border: 1px solid yellow; */
+        /* background-color: aquamarine; */
+        margin-top: 230px;
+    }
+
+
+    .scrol {
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .scrol {
+        animation-name: ring;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ring {
+        0% {
+            margin-top: 0px;
+        }
+
+        100% {
+            margin-top: 10px;
+        }
+
+    }
+
+    /* ///////////////line///////////////// */
+    .linework2 {
+        width: 150px;
+        height: 15px;
+        /* border: 1px solid greenyellow; */
+        margin-left: 200px;
+    }
+
+    .linework3 {
+        width: 150px;
+        height: 15px;
+        /* border: 1px solid greenyellow; */
+        /* margin-left: 200px; */
+    }
+
+    .linework {
+        width: 150px;
+        height: 15px;
+        /* border: 1px solid greenyellow; */
+    }
+
+    .lineanimation {
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        background-color: rgb(174, 198, 239);
+        position: relative;
+    }
+
+    .ring {
+        width: 8px;
+        height: 8px;
+        /* border: 1px solid blue; */
+        background-color: rgb(12, 90, 219);
+        border-radius: 100%;
+        position: absolute;
+        top: -2px;
+        left: 0px;
+
+    }
+
+    .ring {
+        animation-name: boll;
+        animation-duration: 2s;
+        /* animation-direction: alternate; */
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes boll {
+        from {
+            margin-left: 0%;
+        }
+
+        to {
+            margin-left: 100%;
+        }
+
+    }
+
+    .years p {
+        width: 300px;
+        /* border: 1px solid blue; */
+        font-size: 20px;
+        word-spacing: 15px;
+
+    }
+
+    .years h1 {
+        font-size: 50px;
+        word-spacing: 8px;
+    }
+
+    .years {
+        color: rgb(12, 90, 219);
+    }
+
+    .years h1 {
+        color: black;
+    }
+
+    .color {
+        color: rgb(12, 90, 219);
+    }
+
+    .text2 p {
+        font-size: 20px;
+        word-spacing: 8px;
+        margin-top: 30px;
+
+    }
+
+    .text-area {
+        /* border: 2px solid rgba(255, 238, 0, 0.916); */
+    }
+
+    .pic-area {
+        /* border: 2px solid blue; */
+        position: relative;
+    }
+
+
+    .feature,
+    .feature4 {
+        width: 350px;
+        height: 400px;
+        position: absolute;
+        top: 0px;
+        left: 50px;
+    }
+
+    .feature4 {
+        width: 370px;
+        height: 290px;
+        margin-top: 220px;
+        margin-left: 200px;
+    }
+
+
+    /* \\\\\\\\\\\\\\3d animation\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
+    .manincontainer {
+        width: 1200px;
+        height: 340px;
+        /* border: 3px solid gold; */
+        position: absolute;
+        top: -200px;
+        left: 100px;
+        /* background-color: gray; */
+        z-index: 1;
+    }
+
+    .frist {
+        width: 250px;
+        height: 320px;
+        border-radius: 20px;
+        margin-top: 10px;
+        display: inline-block;
+        perspective: 1000px;
+        vertical-align: top;
+    }
+
+    .second {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 20px;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        /* background-color: blue; */
+    }
+
+    .frist:hover .second {
+        transform: rotateY(180deg);
+    }
+
+    .front {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        background-color: white;
+        color: black;
+        font-size: 18px;
+    }
+
+    .shield {
+        margin: auto;
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .Web {
+        margin: auto;
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .products1 {
+        margin: auto;
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+
+    }
+
+    .it1 {
+        margin: auto;
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .frist {
+        margin-left: 40px;
+    }
+
+    .front h3 {
+        margin-top: 250px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .back h4 {
+        margin-top: 100px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .back p {
+        /* margin-top: 100px; */
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        background-color: rgb(12, 90, 219);
+        color: white;
+        transform: rotateY(180deg);
+        font-size: 18px;
+    }
+
+
+
+
+    /* ////////////////////////sectio3//////////////////? */
+    .section3 {
+        width: 100%;
+        height: 150Vh;
+        /* border: 1px solid red; */
+    }
+
+    .vedio {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        position: relative;
+
+    }
+
+    .video1 {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        object-fit: cover;
+        position: relative;
+        opacity: 0.5px;
+    }
+
+    .service1 {
+        width: 600px;
+        height: 150px;
+        /* border: 1px solid green; */
+        position: absolute;
+        top: 30px;
+        left: 450px;
+        margin: auto;
+        color: white;
+        text-align: center;
+    }
+
+    .service1 p {
+        font-size: 40px;
+    }
+
+    .service1 h1 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+
+    /* ////////////////////////////////3d animation video///////////////// */
+    .firstarea {
+        width: 1200px;
+        height: 340px;
+        /* border: 1px solid rgb(12, 90, 219); */
+        position: absolute;
+        top: 240px;
+        left: 100px;
+        /* background-color: gray; */
+        z-index: 1;
+    }
+
+    .firstarea2 {
+        width: 1200px;
+        height: 340px;
+        /* border: 1px solid rgb(12, 90, 219); */
+        position: absolute;
+        top: 580px;
+        left: 100px;
+        /* background-color: gray; */
+        z-index: 1;
+    }
+
+    .frist1 {
+        width: 390px;
+        height: 320px;
+        border: 1px solid rgb(12, 90, 219);
+        border-radius: 20px;
+
+        margin-top: 10px;
+        /* left: 5px; */
+        display: inline-block;
+        vertical-align: top;
+        perspective: 1000px;
+    }
+
+    .second2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 20px;
+        transform-style: preserve-3d;
+        transition: all 2s ease;
+        /* background-color: rgba(0, 0, 255, 0.181); */
+    }
+
+    .frist1:hover .second2 {
+        transform: rotateY(180deg);
+    }
+
+
+
+    .front1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        /* background-color: rgba(255, 255, 255, 0.161); */
+        color: black;
+        font-size: 18px;
+    }
+
+    .shield2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .Web2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .products2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+
+    }
+
+
+    .frist1 {
+        margin-left: 5px;
+    }
+
+    .front1 h3 {
+        margin-top: 180px;
+        margin-left: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    .front1 p {
+        margin-top: 20px;
+        margin-left: 10px;
+        text-align: center;
+        color: white;
+    }
+
+
+    .back1 h4 {
+        margin-top: 100px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .back1 p {
+        margin-top: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .more {
+        width: 150px;
+        height: 30px;
+        background-color: white;
+        border-radius: 5px;
+        /* margin-top: 10px; */
+        margin-left: 150px;
+
+
+    }
+
+    .back1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        background-color: rgb(12, 90, 219);
+        color: white;
+        transform: rotateY(180deg);
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    /* /////////////////////////rotat X //////////////////////// */
+    .firstarea {
+        width: 1200px;
+        height: 340px;
+        /* border: 1px solid rgb(12,90,219); */
+        position: absolute;
+        top: 240px;
+        left: 100px;
+        /* background-color: gray; */
+        z-index: 1;
+    }
+
+    .firstare2 {
+        width: 1200px;
+        height: 340px;
+        /* border: 1px solid rgb(12,90,219); */
+        position: absolute;
+        top: 580px;
+        left: 100px;
+        /* background-color: gray; */
+        z-index: 1;
+    }
+
+    .frista1 {
+        width: 390px;
+        height: 320px;
+        border: 1px solid rgb(12, 90, 219);
+        border-radius: 20px;
+        margin-top: 10px;
+        /* left: 5px; */
+        display: inline-block;
+        vertical-align: top;
+        perspective: 1000px;
+    }
+
+    .seconda2 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 20px;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+        /* background-color: rgba(0, 0, 255, 0.181); */
+    }
+
+    .frista1:hover .seconda2 {
+        transform: rotateX(180deg);
+    }
+
+    .fronta1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        /* background-color: rgb(12,90,219); */
+        color: black;
+        font-size: 18px;
+    }
+
+    .shield2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .Web2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+    }
+
+    .products2 {
+        margin: auto;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        font-size: 100px;
+        z-index: 1;
+
+    }
+
+    .pic1 {
+        width: 390px;
+        height: 320px;
+        position: absolute;
+        opacity: 0.1;
+        top: 0px;
+        left: 0px;
+
+    }
+
+    .frista1 {
+        margin-left: 5px;
+    }
+
+    .fronta1 h3 {
+        margin-top: 180px;
+        margin-left: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    .fronta1 p {
+        margin-top: 20px;
+        margin-left: 10px;
+        text-align: center;
+        color: white;
+    }
+
+
+    .backa1 h4 {
+        margin-top: 100px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .backa1 p {
+        margin-top: 10px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .more {
+        width: 100px;
+        height: 30px;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+        margin-top: 10px;
+
+
+    }
+
+    .backa1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        position: absolute;
+        backface-visibility: hidden;
+        background-color: rgb(12, 90, 219);
+        color: white;
+        transform: rotatex(180deg);
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .pic2 {
+
+        width: 390px;
+        height: 320px;
+        position: absolute;
+        opacity: 0.1;
+        top: 0px;
+        left: 0px;
+    }
+
+    .pic3 {
+
+        width: 390px;
+        height: 320px;
+        position: absolute;
+        opacity: 0.1;
+        top: 0px;
+        left: 0px;
+    }
+
+
+
+    /* ///////////////////.section4//////////////// */
+
+
+    .section4 {
+        width: 100%;
+        height: 110vh;
+        /* border: 1px solid red; */
+        background-image: url(./team-bg2.jpg);
+        background-position: center;
+        object-fit: cover;
+        position: relative;
+
+    }
+
+    .textbutton {
+        width: 100%;
+        height: 220px;
+        /* border: 1px solid blue; */
+
+    }
+
+    .text {
+        width: 70%;
+        height: 220px;
+        /* border: 1px solid blue; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .text p {
+        font-size: 20px;
+        color: blue;
+        /* word-spacing:calc(5); */
+        margin-left: 100px;
+        margin-top: 30px;
+        letter-spacing: .2cm;
+    }
+
+    .text h1 {
+        font-size: 40px;
+        /* color: blue; */
+        /* word-spacing:calc(5); */
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    .buttonarea {
+        width: 29%;
+        height: 50px;
+        /* border: 1px solid greenyellow; */
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 120px;
+
+    }
+
+    .member {
+        border: none;
+        border-radius: 5px;
+        background-color: rgb(12, 90, 219);
+        color: white;
+        width: 200px;
+        height: 100%;
+        font-size: 20px;
+
+    }
+
+    .ring2 {
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid blue; */
+    }
+
+    .teampic {
+        width: 100%;
+        height: 65vh;
+        /* border: 4px solid black; */
+        position: absolute;
+        z-index: 1;
+    }
+
+    .fourpic {
+        width: 90%;
+        height: 100%;
+        /* border: 5px solid red; */
+        margin-left: 100px;
+    }
+
+    .ceo,
+    .director,
+    .founder,
+    .manager {
+        width: 23%;
+        height: 100%;
+        /* border-bottom: 3px solid blue; */
+        background-color: white;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin-left: 18px;
+    }
+
+    .ceohover {
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        margin-top: 5px;
+
+
+    }
+
+
+
+
+    .ceo1,
+    .der1,
+    .founder1,
+    .manag1 {
+        width: 100%;
+        height: 70%;
+        /* border: 1px solid green; */
+        /* margin-left: 20px; */
+        /* margin-top: 5px; */
+    }
+
+
+    .blue2 {
+        width: 100%;
+        height: 70%;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid red; */
+        background-color: rgb(12, 90, 219);
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transition: .5s;
+    }
+
+    .ceohover:hover .blue2 {
+        opacity: 0.6;
+        visibility: visible;
+        background-color: rgb(12, 90, 219);
+    }
+
+    .boxshow2 {
+        width: 50px;
+        height: 130px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        left: 290px;
+        opacity: 0;
+        /* overflow: hidden; */
+        transition: 0.5s;
+    }
+
+    .boxshow2 i {
+        display: block;
+        margin-top: 20px;
+        margin-left: 15px;
+    }
+
+    .ceohover:hover .boxshow2 {
+        left: 260px;
+        opacity: 1;
+    }
+
+    .team-text {
+        width: 170px;
+        height: 65px;
+        /* border: 1px solid red; */
+        margin-left: 50px;
+        position: absolute;
+        /* padding-top: -30px; */
+        top: 360px;
+    }
+
+    .director h6 {
+        width: 100%;
+        height: 30px;
+        /* border: 1px solid green; */
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .director p {
+        color: (12, 90, 219);
+        width: 50px;
+        height: 30px;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        margin-left: 50px;
+        font-size: 20px;
+    }
+
+    .founder p {
+        color: (12, 90, 219);
+        width: 50px;
+        height: 30px;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        margin-left: 50px;
+        font-size: 20px;
+
+    }
+
+    .founder h6 {
+        width: 100%;
+        height: 30px;
+        /* border: 1px solid green; */
+        text-align: center;
+        font-size: 20px;
+
+
+    }
+
+    .ceo h6 {
+        width: 100%;
+        height: 30px;
+        /* border: 1px solid green; */
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .ceo p {
+        width: 50px;
+        height: 30px;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        color: (12, 90, 219);
+        margin-left: 50px;
+        font-size: 20px;
+    }
+
+    .manager h6 {
+        width: 100%;
+        height: 30px;
+        /* border: 1px solid green; */
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .manager p {
+
+        width: 50px;
+        height: 30px;
+        /* border: 1px solid yellow; */
+        text-align: center;
+        margin-left: 50px;
+        font-size: 20px;
+        color: (12, 90, 219);
+
+    }
+
+
+    /* //////////////////////section5////////////////// */
+
+    .section5 {
+
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid blue; */
+        /* text-align: center; */
+    }
+
+    .text-area2 {
+
+        width: 400px;
+        height: 220px;
+        /* border: 1px solid red; */
+        margin-left: 550px;
+        margin-top: 20px;
+    }
+
+    .text-area2 p {
+        color: (12, 90, 219);
+        font-size: 30px;
+        letter-spacing: 1mm;
+        margin-top: 20px;
+
+    }
+
+    .text-area2 h3 {
+        font-size: 35px;
+        margin-top: 15px;
+        /* text-align: left; */
+        /* margin-left: 60px; */
+    }
+
+    .linework3 {
+        width: 100px;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+
+
+    .caseagent {
+
+        width: 100%;
+        height: 400px;
+        border: 1px solid blue;
+        margin-top: 20px;
+        /* position: relative; */
+    }
+
+    .movearea {
+        width: 180%;
+        height: 400px;
+        border: 1px solid blue;
+        /* margin-top: 20px; */
+        position: relative;
+    }
+
+    .c1,
+    .c2,
+    .c3,
+    .c4 {
+        width: 13.7%;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid yellow;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+
+    .case2,
+    .case7,
+    .case3,
+    .case5 {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        /* border: 3px solid black; */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .blue {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid red; */
+        background-color: rgb(12, 90, 219);
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transition: .5s;
+    }
+
+    .boxshow1 {
+        width: 200px;
+        height: 100px;
+        /* border: 1px solid red; */
+        background-color: white;
+        position: absolute;
+        top: 200px;
+        left: 50px;
+        opacity: 0;
+        /* overflow: hidden; */
+        transition: 0.5s;
+    }
+
+    .boxshow1 p {
+        text-align: center;
+        color: (12, 90, 219);
+    }
+
+    .boxshow1 h3 {
+        margin-top: 20px;
+        text-align: center
+    }
+
+    .c1:hover .blue {
+        opacity: 0.6;
+        visibility: visible;
+        background-color: rgb(12, 90, 219);
+
+    }
+
+    .c2:hover .blue {
+        opacity: 0.6;
+        visibility: visible;
+        background-color: rgb(12, 90, 219);
+
+    }
+
+    .c3:hover .blue {
+        opacity: 0.6;
+        visibility: visible;
+        background-color: rgb(12, 90, 219);
+
+    }
+
+    .c4:hover .blue {
+        opacity: 0.6;
+        visibility: visible;
+        background-color: rgb(12, 90, 219);
+
+    }
+
+    .c1:hover .boxshow1 {
+        top: 100px;
+        opacity: 1;
+    }
+
+    .c2:hover .boxshow1 {
+        top: 100px;
+        opacity: 1;
+    }
+
+    .c3:hover .boxshow1 {
+        top: 100px;
+        opacity: 1;
+    }
+
+    .c4:hover .boxshow1 {
+        top: 100px;
+        opacity: 1;
+    }
+
+    /* ////////////////////////////six//////////////////// */
+
+    .section6 {
+        width: 100%;
+        height: 90vh;
+        /* background-color: aquamarine; */
+        /* border: 1px solid red; */
+        text-align: center;
+        /* padding: 1px; */
+    }
+
+    .text-line {
+        width: 500px;
+        height: 140px;
+        border: 1px solid white;
+        text-align: center;
+        margin-top: 50px;
+        /* margin-left: 500px; */
+
+    }
+
+    .text-line p {
+        border: 1px solid green;
+        margin-top: 50px;
+        letter-spacing: 5px;
+        font-size: 30px;
+        color: blue;
+
+    }
+
+    .linework5 {
+        width: 100px;
+        margin-left: 700px;
+        margin-top: 20px;
+
+
+    }
+
+    .text-line h3 {
+
+        font-size: 40px;
+
+
+
+    }
+
+    .ring3 {
+        width: 100%;
+        height: 100px;
+        /* border: 1px solid blue; */
+        margin-top: 50px;
+    }
+
+    .allring {
+        width: 70px;
+        height: 70px;
+        /* border: 1px solid yellow; */
+        border-radius: 100px;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 50px;
+        display: inline-block;
+        vertical-align: top;
+        /* vertical-align: top; */
+        /* display: inline; */
+
+    }
+
+    .line {
+        width: 400px;
+        height: 20px;
+        /* border: 1px solid red; */
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+
+    .dotline {
+        width: 400px;
+        /* height: 3px; */
+        border: 2px dotted blue;
+        margin-top: 5px;
+
+        /* position: absolute; */
+
+    }
+
+
+
+    .ring1 {
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        background-color: rgb(12, 90, 219);
+        position: absolute;
+        top: 20px;
+        color: white;
+        /* bottom: 0px;
+        right: 0px; */
+        left: 20px;
+        /* vertical-align: top; */
+        /* display: inline; */
+    }
+
+    .ringa2 {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        /* border: 1px solid gold; */
+        background-color: rgb(128, 169, 236);
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        /* vertical-align: top; */
+        /* display: inline; */
+    }
+
+    .ringa3 {
+        width: 70px;
+        height: 70px;
+        /* border: 1px solid black; */
+        border-radius: 100px;
+        background-color: rgb(206, 222, 248);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        /* vertical-align: top; */
+        /* display: inline; */
+    }
+
+    .text-line2 {
+        width: 90%;
+        height: 200px;
+        /* border: 1px solid green; */
+        margin-left: 70px;
+        margin-top: 10px;
+    }
+
+
+    .textdata {
+        width: 30%;
+        height: 100%;
+        /* border: 1px solid yellow; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 30px;
+        text-align: center;
+        /* margin-top: 30px; */
+    }
+
+    .textdata p {
+        margin-top: 30px;
+    }
+
+    .textdata h3 {
+        margin-top: 30px;
+    }
+
+    .information {
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid black; */
+        background-color: rgb(12, 90, 219);
+        /* border: 1px solid salmon; */
+        background-image: url(./footer-threee.jpg);
+        background-position: top;
+        /* color: aqua; */
+        object-fit: cover;
+        /* object-position: x30px; */
+
+    }
+
+    .font {
+        width: 80%;
+        height: 350px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+
+    }
+
+    .font p {
+        margin-top: 100px;
+        margin-left: 200px;
+        font-size: 40px;
+    }
+
+    .font h3 {
+        margin-left: 200px;
+        font-size: 40px;
+
+
+    }
+
+    .join {
+        width: 200px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 200px;
+        color: rgb(12, 90, 219);
+    }
+
+    .arrow1 {
+        width: 19.5%;
+        height: 350px;
+        /* border: 1px solid red; */
+        /* border-radius: 50%; */
+        /* background-color:aquamarine;        margin: auto; */
+        display: inline-block;
+        vertical-align: top;
+
+    }
+
+
+    .arrow {
+        width: 100px;
+        height: 100px;
+        /* border: 1px solid black; */
+        border-radius: 50%;
+        background-color: white;
+        margin: auto;
+        margin-top: 130px;
+        /* display: inline-block;
+        vertical-align: top; */
+        padding: 1px;
+
+    }
+
+    .arrowright {
+        clip-path: polygon(0 0, 0 100%, 100% 51%);
+        background-color: rgb(12, 90, 219);
+        width: 50px;
+        height: 45px;
+        /* border: 1px solid white; */
+        border-radius: 5px;
+        margin-top: 25px;
+        margin-left: 30px;
+
+
+    }
+
+    .client {
+        width: 100%;
+        height: 133vh;
+        border: none;
+        position: relative;
+        padding: 1px;
+
+    }
+
+    .clientcount {
+        width: 80%;
+        height: 30vh;
+
+        border-radius: 20px;
+        background-image: url(./about-bg.jpg);
+        background-position: center;
+        object-fit: cover;
+        /* border: 1px solid red; */
+        position: absolute;
+        top: -140px;
+        left: 100px
+    }
+
+    .client1,
+    .client2,
+    .client3,
+    .client4 {
+        width: 24%;
+        height: 97%;
+        /* background-color: aquamarine; */
+        /* border: 1px solid black; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        border-radius: 10px;
+        margin-top: 2px;
+    }
+
+    .client1,
+    .client2,
+    .client3 {
+        border-right: 1px solid gray;
+
+
+
+    }
+
+
+    .client1 h2 {
+        font-size: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+
+    .client1 p {
+        font-size: 20px;
+        margin-left: 70px;
+        color: blue;
+        /* margin-top: 30px; */
+    }
+
+    .client2 h2 {
+        font-size: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+
+    .client2 p {
+        font-size: 20px;
+        margin-left: 70px;
+        color: blue;
+        /* margin-top: 30px; */
+    }
+
+    .client3 h2 {
+        font-size: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+
+    .client3 p {
+        font-size: 20px;
+        margin-left: 70px;
+        color: blue;
+        /* margin-top: 30px; */
+    }
+
+    .client4 h2 {
+        font-size: 50px;
+        margin-left: 80px;
+        margin-top: 30px;
+    }
+
+    .client4 p {
+        font-size: 20px;
+        margin-left: 70px;
+        color: blue;
+        /* margin-top: 30px; */
+    }
+
+    .testimonial {
+
+        width: 500px;
+        height: 200px;
+        /* border: 1px solid red; */
+        margin-top: 200px;
+        margin-left: 400px;
+        text-align: center;
+    }
+
+    .testimonial p {
+        letter-spacing: 3px;
+        font-size: 20px;
+        color: blue;
+        font: bold;
+    }
+
+    .testimonial h3 {
+        font-size: 50px;
+
+
+
+    }
+
+    .monial {
+        width: 100px;
+        margin-left: 200px;
+        margin-top: 20px;
+
+    }
+
+    .commint {
+        width: 100%;
+        height: 435px;
+        /* border: 1px solid blue; */
+        padding: 1px;
+        margin-top: 20px;
+    }
+
+    .commint1 {
+        width: 24.7%;
+        height: 200px;
+        /* border: 1px solid gold; */
+        display: inline-block;
+        background-color: white;
+        vertical-align: top;
+    }
+
+    .commint1 p {
+        color: gray;
+        margin-top: 50px;
+        margin-left: 25px;
+        font-size: 17px;
+    }
+
+
+    .clientpic {
+        width: 100%;
+        height: 180px;
+        /* border: 1px solid blue; */
+        margin-top: 20px;
+    }
+
+    .clienta1 {
+        width: 24.7%;
+        height: 200px;
+        background-color: white;
+        /* border: 1px solid gold; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .clienta1 img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin-top: 40px;
+
+        /* border: 1px solid gold; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .star {
+        width: 100px;
+        height: 20px;
+        border: 1px solid green;
+        margin-left: 100px;
+        margin-top: -100px;
+    }
+
+    .star h3 {
+        width: 150px;
+        /* border: 1px solid green; */
+        margin-top: 10px;
+
+
+    }
+
+    .star p {
+        width: 120px;
+        /* border: 1px solid green; */
+        color: blue;
+        /* color: blue; */
+        margin-top: 10px;
+    }
+
+    .star1 {
+        font-size: 10px;
+
+    }
+
+    .star2 {
+        font-size: 10px;
+
+    }
+
+    .star3 {
+        font-size: 10px;
+
+    }
+
+    .star4 {
+        font-size: 10px;
+
+    }
+
+    .star5 {
+        font-size: 10px;
+
+    }
+
+    /* ///////////////////////////////////////// */
+
+
+    .Consultancy1 {
+        width: 100%;
+        height: 140vh;
+        /* border: 1px solid red; */
+        background-color: rgb(12, 90, 219);
+        /* margin-top: 100px; */
+    }
+
+    .rollar {
+
+        width: 100%;
+        height: 300px;
+        /* border: 1px solid green; */
+    }
+
+    .text-consult {
+        width: 700px;
+        height: 100%;
+        /* border: 1px solid black; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 300px;
+        color: white;
+        text-align: center;
+
+
+    }
+
+    .text-consult p {
+        font-size: 30px;
+        margin-top: 70px;
+    }
+
+    .text-consult h3 {
+        font-size: 50px;
+    }
+
+    .moniala1 {
+        width: 100px;
+        margin-top: 20px;
+        margin-left: 300px;
+    }
+
+    .animring2 {
+        width: 300px;
+        height: 300px;
+        /* border: 1px solid white; */
+        /* margin-left: 990px; */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+
+    .animring2 img {
+
+
+        width: 100%;
+        height: 100%;
+
+        /* background-color: blue; */
+        animation-name: ring5;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ring5 {
+        0% {
+            margin-top: 15px;
+        }
+
+        100% {
+            margin-top: 0px;
+        }
+
+    }
+
+    .form1 {
+        width: 100%;
+        height: 595px;
+        /* border: 1px solid red; */
+        /* background-color: aquamarine; */
+        /* margin-top   : 10px; */
+    }
+
+    .namelast,
+    .email1,
+    .phone2,
+    .Website {
+        width: 600px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        /* border: 1px solid black; */
+        background-color: rgb(61, 123, 226);
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 30px;
+        font-size: 20px;
+
+        color: white;
+    }
+
+    .messanger {
+
+        width: 1230px;
+        height: 300px;
+        border-radius: 10px;
+        border: none;
+        /* border: 1px solid black; */
+        background-color: rgb(61, 123, 226);
+        margin-left: 30px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .apply {
+        width: 200px;
+        height: 60px;
+        border-radius: 10px;
+        border: none;
+        background-color: white;
+        margin-left: 500px;
+        margin-top: 30px;
+        font-size: 20px;
+
+    }
+
+
+
+    /* //////////////////////BLOG///////////////// */
+
+    .blog {
+        width: 100%;
+        height: 110vh;
+        /* border: 3px solid red; */
+    }
+
+    .bloger {
+        width: 100%;
+        height: 200px;
+        /* border: 1px solid yellow; */
+
+    }
+
+    .blogerfont {
+        width: 600px;
+        height: 400px;
+        /* border: 1px solid red; */
+        text-align: left;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 150px;
+        margin-left: 100px;
+
+    }
+
+    .blogerfont p {
+        font-size: 25px;
+        letter-spacing: .3cm;
+    }
+
+    .blogerfont h3 {
+        font-size: 50px;
+    }
+
+    .blogline {
+        width: 150px;
+        height: 10px;
+        /* border: 1px solid red; */
+        margin-top: 10px;
+    }
+
+    .seeblog {
+        width: 200px;
+        height: 60px;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        color: white;
+        background-color: rgb(12, 90, 219);
+        border-radius: 10px;
+        margin-left: 300px;
+        margin-top: 200px;
+    }
+
+    .seeblog p {
+        margin-top: 15px;
+        margin-left: 40px;
+        font-size: 20px;
+    }
+
+    .blogertext {
+        width: 100%;
+        height: 500px;
+        margin-top: 150px;
+        /* border: 2px solid orchid; */
+        /* background-color: aquamarine; */
+    }
+
+    .blogfirst {
+        width: 24.5%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 2.8px;
+        position: relative;
+    }
+
+    .blogfirst img {
+        width: 100%;
+        height: 250px;
+        border: 1px solid;
+
+    }
+
+    .buttontext {
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: blue;
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        color: white;
+        border: none;
+
+    }
+
+    .blogtext p {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .blogtext h3 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .blogtext h6 {
+        font-size: 15px;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+
+    .blogtext h4 {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    /* //////////////////////////////////////// */
+    .Subscribe {
+        width: 100%;
+        height: 300px;
+        background-color: rgb(34, 19, 198);
+        padding: 1px;
+        top: 150px;
+        position: relative;
+    }
+
+    .Subscribe h3 {
+        width: 470px;
+        height: 60px;
+        /* border: 1px solid white; */
+        color: white;
+        margin-left: 450px;
+        margin-top: 80px;
+        font-size: 40px;
+        /* padding: 1px; */
+    }
+
+    .subscribedata {
+
+        width: 600px;
+        height: 60px;
+        border-radius: 10px;
+        /* border: 1px solid white; */
+        color: white;
+        margin-left: 400px;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .subbutton {
+        width: 200px;
+        height: 40px;
+        position: absolute;
+        border: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 10px;
+        top: 170px;
+        right: 510px;
+        /* margin-top: -150px; */
+        /* margin-left: 780px; */
+        background-color: blue;
+    }
+
+    /* /////////////footer///////////// */
+
+
+
+
+    .address {
+        width: 100%;
+        height: 110vh;
+        background-image: url(./footer-threee.jpg);
+        background-position: bottom;
+        object-fit: cover;
+        padding: 1px;
+    }
+
+    .social {
+        width: 1270px;
+        height: 400px;
+        /* border: 1px solid white; */
+        margin-top: 100px;
+        margin-left: 40px;
+        /* padding: 1px; */
+
+
+    }
+
+    .social1,
+    .social2,
+    .social3,
+    .social4 {
+        width: 300px;
+        height: 100%;
+        /* border: 1px solid green; */
+        display: inline-block;
+        vertical-align: top;
+        /* margin-left: 3px; */
+        color: white;
+
+    }
+
+    .social4 {
+        width: 350px;
+
+
+    }
+
+    .social1 img {
+
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .social1 p {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .social1 h3 {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
+
+    .icon4 {
+        width: 170px;
+        height: 50px;
+        /* border: 1px solid red; */
+        margin-top: 30px;
+        margin-left: 50px;
+        font-size: 30px;
+    }
+
+    .icon4 i {
+        width: 35px;
+        height: 40px;
+        /* border: 1px solid green; */
+        background-color: blue;
+
+
+    }
+
+    .social2 h3 {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .social2 ul li {
+        margin-top: 20px;
+        margin-left: 70px;
+
+    }
+
+    .social3 h3 {
+        margin-top: 100px;
+        margin-left: 50px;
+
+    }
+
+    .picadd {
+        width: 100%;
+        height: 100px;
+        margin-top: 30px;
+        border-bottom: 1px solid gray;
+    }
+
+    .picadd2 {
+        width: 100%;
+        height: 100px;
+        margin-top: 30px;
+        /* border-bottom: 1px solid gray; */
+    }
+
+    .picadd img {
+        width: 85px;
+        height: 85%;
+        margin-top: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .picadd2 img {
+        width: 85px;
+        height: 85%;
+        margin-top: 5px;
+        margin-left: 5px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .addtext {
+        width: 200px;
+        height: 100%;
+        /* border: 1px solid red; */
+        display: inline-block;
+        vertical-align: top;
+        /* margin-top: 100px;
+        margin-left: 50px; */
+
+
+
+    }
+
+    .addtext h3 {
+
+        margin: auto;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 15px;
+    }
+
+    .addtext p {
+        color: blue;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .social4 h3 {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+    .infoadd,
+    .infoadd1,
+    .infoadd2 {
+        width: 300px;
+        height: 60px;
+        /* border: 1px solid gray; */
+        margin-top: 25px;
+    }
+
+    .infoadd i {
+        width: 20px;
+        height: 30px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: 1op;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .infoadd h3 {
+        width: 80px;
+        height: 25px;
+        margin: auto;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid gray; */
+        margin-left: 20px;
+
+    }
+
+    .infoadd p {
+        width: 185px;
+        height: 25px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 55px;
+        margin-top: -20px;
+        color: blue;
+
+
+    }
+
+    .infoadd1 i {
+        width: 20px;
+        height: 30px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: 1op;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .infoadd1 h3 {
+        width: 80px;
+        height: 25px;
+        margin: auto;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid gray; */
+        margin-left: 55px;
+        margin-top: -45px;
+
+    }
+
+    .infoadd1 p {
+        width: 185px;
+        height: 25px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 55px;
+        margin-top: -40px;
+        color: blue;
+
+    }
+
+    .infoadd2 i {
+        width: 20px;
+        height: 30px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: 1op;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .infoadd2 h3 {
+        width: 100px;
+        height: 25px;
+        margin: auto;
+        display: inline-block;
+        vertical-align: top;
+        /* border: 1px solid gray; */
+        margin-left: 55px;
+        margin-top: -45px;
+
+    }
+
+    .infoadd2 p {
+        width: 185px;
+        height: 25px;
+        /* border: 1px solid gray; */
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 55px;
+        margin-top: -40px;
+        color: blue;
+
+    }
+
+    .footertext {
+
+        width: 94.5%;
+        height: 100px;
+        border-top: 1px solid rgb(69, 104, 220);
+        /* border: 1px solid blue; */
+        margin-left: 40px;
+        margin-top: 100px;
+        color: white;
+    }
+
+    .footer1,
+    .footer2 {
+        display: inline-block;
+        vertical-align: top;
+
+    }
+
+    .footer1 p {
+        margin-top: 30px;
+
+    }
+
+    .footer2 ul {
+        margin-top: 30px;
+        margin-left: 600px;
+    }
+
+
+
+
+    .footer2 ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 30px;
+
+
+
+
+
+    }
+</style>
+
+<body>
+    <div class="topbar">
+        <div class="emailicon">
+            <i class="fa-regular fa-envelope email"></i>
+            <p class="iconetext">example@example.com</p>
+        </div>
+        <div class="map">
+            <i class="fa-regular fa-map map1"></i>
+            <p class="maptext">2/20, Astern Road, USA</p>
+        </div>
+        <div class="phone">
+            <i class="fa-solid fa-phone phone1"></i>
+            <p class="phonetext">+880 320 432 242</p>
+        </div>
+        <div class="allicons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-globe"></i>
+
+        </div>
+    </div>
+    
+    <div class="manubar">
+        <div class="allmanu">
+            <img class="logopic" src="./main-logo.png" alt="">
+            <div class="manulist">
+                <ul>
+                    <li class="lists">Home <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop-down1">
+                            <div class="listone">
+                                <ul>
+                                    <li>Main Demo</li>
+                                    <li> IT Solution (New)</li>
+                                    <li>Digital Agency (New)</li>
+                                    <li>Software & Startup(New)</li>
+                                    <li>Home SEO (New)</li>
+                                    <li> Insurance (New)</li>
+                                    <li>IT Solution Demo 02</li>
+                                    <li>IT Solution Demo 03</li>
+                                    <li>IT Solution Demo 04</li>
+                                    <li>IT Solution Demo 05 </li>
+                                </ul>
+                            </div>
+                            <div class="listone">
+                                <ul>
+                                    <li>IT Solution Demo 06</li>
+                                    <li>IT Solution Demo 07</li>
+                                    <li>IT Solution Demo 08</li>
+                                    <li>IT Solution Demo 09</li>
+                                    <li>IT Solution Demo 10</li>
+                                    <li>IT Solution Demo 11</li>
+                                    <li>IT Solution Demo 12</li>
+                                    <li>IT Solution Demo 13</li>
+                                    <li>IT Solution Demo 14</li>
+                                    <li>IT Solution Demo 15</li>
+
+                                </ul>
+                            </div>
+                            <div class="listone">
+                                <ul>
+                                    <li>IT Startup Demo 01</li>
+                                    <li>IT Startup Demo 03</li>
+                                    <li>Crypto Currency 01</li>
+                                    <li>Crypto Currency 02</li>
+                                    <li>Odoo ERP Demo</li>
+                                    <li>Demo Cyber Security</li>
+                                    <li>Business Demo 01</li>
+                                    <li>Animate Demo 01</li>
+                                    <li>IT Startup Demo 02</li>
+                                    <li>Dark Version 01</li>
+                                </ul>
+                            </div>
+                            <div class="listone">
+                                <ul>
+                                    <li>Dark Version 02</li>
+                                    <li>Landing Page Demo 01</li>
+                                    <li>Landing Page Demo 02</li>
+                                    <li>Landing Page Demo 03</li>
+                                    <li>Landing Page Demo 04</li>
+                                    <li>Landing Page Demo 05</li>
+                                    <li>Landing Page Demo 06</li>
+                                    <li>Landing Page Demo 07</li>
+                                    <li>Landing Page Demo 08</li>
+                                    <li>Landing Page Demo 09</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="lists">Company Services</li>
+
+                    <li class="lists">Services <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop-down2">
+                            <div class="listtwo">
+                                <ul>
+                                    <li>IT Service</li>
+                                    <li>Industries</li>
+                                    <li>Business Solution</li>
+                                    <li>Managed IT Services</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lists">Pages <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop-down4">
+                            <div class="listfour">
+                                <ul>
+                                    <li>About Us Style 01</li>
+                                    <li>About Us Style 02</li>
+                                    <li>About Us Style 03</li>
+                                    <li>About Us Style 04</li>
+                                    <li>About Us Style 05</li>
+                                    <li>Why Choose Us</li>
+
+                                </ul>
+                            </div>
+                            <div class="listfour">
+                                <ul>
+                                    <li>Service Style 01</li>
+                                    <li>Service Style 02</li>
+                                    <li>Service Style 03</li>
+                                    <li>Service Style 04</li>
+                                    <li>Service Style 05</li>
+                                    <li>Service Details</li>
+                                </ul>
+                            </div>
+                            <div class="listfour">
+                                <ul>
+                                    <li>Pricing Plan-01</li>
+                                    <li>Pricing Plan-02</li>
+                                    <li>Pricing Plan-03</li>
+                                    <li>Portfolio</li>
+                                    <li>Portfolio 2Column</li>
+                                    <li>Portfolio 3Column</li>
+                                </ul>
+                            </div>
+                            <div class="listfour">
+                                <ul>
+                                    <li>Portfolio 4Column</li>
+                                    <li>Contact Style 01</li>
+                                    <li>Contact Style 02</li>
+                                    <li>Contact Style 03</li>
+                                    <li>Contact Style 04</li>
+                                    <li>Contact Style 05</li>
+                                </ul>
+                            </div>
+                            <div class="listfour">
+                                <ul>
+                                    <li>Team Member</li>
+                                    <li>Team Details</li>
+                                    <li>Case Study</li>
+                                    <li>FAQ'S</li>
+                                    <li>Carrier</li>
+                                    <li>Carrier Details</li>
+                                </ul>
+
+                            </div>
+                            <div class="listfour">
+                                <ul>
+                                    <li>FAQ’S</li>
+                                    <li>FAQ’S Style 02</li>
+                                    <li>shop</li>
+                                    <li>Shop</li>
+                                    <li>Checkout</li>
+                                    <li>Cart</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="lists">Elements <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop-down5">
+                            <div class="listfive">
+                                <ul>
+                                    <li>Features Box</li>
+                                    <li>Services Boxes</li>
+                                    <li>Icon Boxes</li>
+                                    <li>Services Boxes Carousel</li>
+                                    <li>Team</li>
+                                    <li>Icons</li>
+
+                                </ul>
+                            </div>
+                            <div class="listfive">
+                                <ul>
+
+                                    <li>Pricing Plans</li>
+                                    <li>Testimonial</li>
+                                    <li>Counter Boxes</li>
+                                    <li>Image Box</li>
+                                    <li>Video</li>
+                                    <li>TAb</li>
+                                </ul>
+                            </div>
+                            <div class="listfive">
+                                <ul>
+                                    <li>Progress Bars</li>
+                                    <li>FAQ'S</li>
+                                    <li>Title</li>
+                                    <li>Lists</li>
+                                    <li>Accordion</li>
+                                    <li>Call Do Action</li>
+                                </ul>
+                            </div>
+                            <div class="listfive">
+                                <ul>
+                                    <li>Buttons</li>
+                                    <li>Pie Chart</li>
+                                    <li>Pie Chart</li>
+                                    <li>Clients</li>
+                                </ul>
+                            </div>
+                    </li>
+                    <li class="lists">Blog <i class="fa-solid fa-chevron-down"></i>
+                        <div class="drop-down3">
+                            <div class="listthree">
+                                <ul>
+                                    <li>Blog Grid</li>
+                                    <li>Blog List</li>
+                                    <li>Blog2 Column</li>
+                                </ul>
+                            </div>
+                    </li>
+                    <li class="lists">Contact</li>
+                </ul>
+            </div>
+            <div class="icon">
+                <div class="icon1">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="icon2">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainpic">
+        <img class="overpic" src="./main-pic.jpg" alt="">
+        <div class="text1">
+            <div class="animationword">
+                <p class="oneword ">T</p>
+                <p class="oneword oneword-o">O</p>
+                <p class="oneword oneword-t">T</p>
+                <p class="oneword oneword-a">A</p>
+                <p class="oneword oneword-l">L</p>
+                &nbsp;
+                <p class="oneword oneword-i">I</p>
+                <p class="oneword oneword-p">T</p>
+                &nbsp;
+                <p class="oneword oneword-s">S</p>
+                <p class="oneword oneword-o2">O</p>
+                <p class="oneword oneword-l1">L</p>
+                <p class="oneword oneword-u">U</p>
+                <p class="oneword oneword-t2">T</p>
+                <p class="oneword oneword-i2">I</p>
+                <p class="oneword oneword-o3">O</p>
+                <p class="oneword oneword-n">N</p>
+            </div>
+
+            <div class="animation2">
+
+                <h1 class="word2">B</h1>
+                <h1 class="word2 word2-e">e</h1>
+                <h1 class="word2 word2-s">s</h1>
+                <h1 class="word2 word2-t">t</h1>
+                &nbsp;
+                <h1 class="word2 word2-i">I</h1>
+                <h1 class="word2 word2-at">T</h1>
+                &nbsp;
+                <h1 class="word2 word2-sa">s</h1>
+                <h1 class="word2 word2-o">o</h1>
+                <h1 class="word2 word2-l">l</h1>
+                <h1 class="word2 word2-u">u</h1>
+                <h1 class="word2 word2-ta">t</h1>
+                <h1 class="word2 word2-ia">i</h1>
+                <h1 class="word2 word2-oa">o</h1>
+                <h1 class="word2 word2-n">n</h1>
+                &nbsp;
+                <h1 class="word2 word2-a">a</h1>
+                <h1 class="word2 word2-g">g</h1>
+                <h1 class="word2 word2-ea">e</h1>
+                <h1 class="word2 word2-na">n</h1>
+                <h1 class="word2 word2-c">c</h1>
+                <h1 class="word2 word2-y">y</h1>
+            </div>
+            <div class="animation3">
+                <h1 class="word3 ">f</h1>
+                <h1 class="word3 word3o">o</h1>
+                <h1 class="word3 word3r">r</h1>
+                &nbsp;&nbsp;
+                <h1 class="word3 word3y">y</h1>
+                <h1 class="word3 word3oa">o</h1>
+                <h1 class="word3 word3u">u</h1>
+                <h1 class="word3 word3ra">r</h1>
+                &nbsp;&nbsp;
+                <h1 class="word3 word3b">B</h1>
+                <h1 class="word3 word3ua">u</h1>
+                <h1 class="word3 word3s">s</h1>
+                <h1 class="word3 word3i">i</h1>
+                <h1 class="word3 word3n">n</h1>
+                <h1 class="word3 word3e">e</h1>
+                <h1 class="word3 word3sa">s</h1>
+                <h1 class="word2 word3sb">s</h1>
+
+            </div>
+            <div class="button">
+                <button class="work">How IT Works</button>
+                <button class="solution">IT Services</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============section2======================== -->
+
+    <div class="section2">
+        <div class="manincontainer">
+            <div class="frist">
+                <div class="second">
+                    <div class="front">
+                        <i class="fa-brands fa-servicestack products1"></i>
+                        <h3>Provide All Kind Of IT
+                            <br>Services
+                        </h3>
+                    </div>
+                    <div class="back">
+                        <h4>Provide All Kind Of IT
+                            <br>Services
+                        </h4>
+                        <p>Whether bringin new and
+                            <br>amazing products and on
+                            <br>services to market
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="frist">
+                <div class="second">
+                    <div class="front">
+                        <i class="fa-solid fa-shield-halved shield"></i>
+                        <h3>Solution For All IT
+                            <br>Security
+                        </h3>
+                    </div>
+                    <div class="back">
+                        <h4>Solution For All IT
+                            <br>Security
+                        </h4>
+                        <p>Whether bringin new and
+                            <br>amazing products and on
+                            <br>services to market
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="frist">
+                <div class="second">
+                    <div class="front">
+                        <i class="fa-solid fa-people-arrows it1"></i>
+                        <h3>All IT Consultancy
+                            <br>Solution
+                        </h3>
+                    </div>
+                    <div class="back">
+                        <h4>All IT Consultancy
+                            <br>Solution
+                        </h4>
+                        <p>Whether bringin new and
+                            <br>amazing products and on
+                            <br>services to market
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="frist">
+                <div class="second">
+                    <div class="front">
+                        <i class="fa-brands fa-wpbeginner Web"></i>
+                        <h3>Best Experience
+                            <br>Engineer
+                        </h3>
+                    </div>
+                    <div class="back">
+                        <h4>Best Experience
+                            <br>Engineer
+                        </h4>
+                        <p>Whether bringin new and
+                            <br>amazing products and on
+                            <br>services to market
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ////////////pic area////////////// -->
+
+
+        <div class="pic-area">
+            <div class="animation">
+                <div class="scrol1">
+                    <img class="scrol" src="./about-circle.png" alt="">
+                </div>
+                <img class="feature" src="./feature3.jpg" alt="">
+                <img class="feature4" src="./featur4-370x290-1.jpg" alt="">
+            </div>
+        </div>
+        <div class="text-area">
+            <div class="years">
+                <p><b>30 YEARS OF EXPERIENCE</b></p>
+                <h1>Preparing For Your Success<br>
+                    Provide Best<span class="color">IT Solutions.</span> </h1>
+            </div>
+            <div class="linework">
+                <div class="lineanimation">
+                    <div class="ring"> </div>
+                </div>
+            </div>
+            <div class="text2">
+                <p>We are privileged to work with hundred future-thinking awesome
+                    <br> businesses including many of the world’s top hardware and get
+                    <br> IT service for your technology.
+                </p>
+            </div>
+            <div class="text2area">
+                <div class="icon3">
+                    <i class="fa-brands fa-wpbeginner Web1"></i>
+                </div>
+                <div class="texticon">
+                    <h2>Warranty Management</h2>
+                    <p>Morem Ipsum is simply dummy text of the printing and presetting
+                        <br>found it agency business.
+                    </p>
+                </div>
+                <div class="icon3">
+                    <i class="fa-solid fa-people-arrows it2"></i>
+                </div>
+                <div class="texticon">
+                    <h2>Quality Control System
+                    </h2>
+                    <p> Porem Ipsum is simply dummy text of the printing and presetting
+                        <br> found best quality for business.
+                    </p>
+                </div>
+                <button class="Button1">Read More</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //////////////////////section 3///////////////////////////// -->
+
+
+    <div class="section3">
+        <div class="vedio">
+            <video class="video1" src="./Techno – IT Solution & Business Service WordPress Theme.mkv" autoplay loop
+                muted></video>
+            <div class="service1">
+                <p>SERVICES</p>
+                <h1>Provide Exclusive Services</h1>
+                <div class="linework2">
+                    <div class="lineanimation">
+                        <div class="ring"> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ///////////////////////3d animation////////////////// -->
+            <div class="firstarea2">
+                <div class="frista1">
+                    <div class="seconda2">
+                        <div class="fronta1">
+                            <i class="fa-brands fa-servicestack products2"></i>
+                            <h3>Product Selling
+                            </h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="backa1">
+                            <h4>Product Selling
+                            </h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic1" src="./ga-03.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="frista1">
+                    <div class="seconda2">
+                        <div class="fronta1">
+                            <i class="fa-brands fa-servicestack shield2"></i>
+                            <h3>Product Design
+                            </h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="backa1">
+                            <h4>Product Design
+                            </h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic1" src="./ga-03.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="frista1">
+                    <div class="seconda2">
+                        <div class="fronta1">
+                            <i class="fa-brands fa-servicestack Web2"></i>
+                            <h3>Social Marketing
+                            </h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="backa1">
+                            <h4>Social Marketing
+                            </h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic3" src="./feature3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ======================= -->
+            <div class="firstarea">
+                <div class="frist1">
+                    <div class="second2">
+                        <div class="front1">
+                            <i class="fa-brands fa-servicestack products2"></i>
+                            <h3>Marketing Strategy</h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="back1">
+                            <h4>Marketing Strategy</h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic1" src="./ga-03.jpg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="frist1">
+                    <div class="second2">
+                        <div class="front1">
+                            <i class="fa-brands fa-servicestack shield2"></i>
+                            <h3>Interior Design
+                            </h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="back1">
+                            <h4>Interior Design
+                            </h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic2" src="./featur4-370x290-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="frist1">
+                    <div class="second2">
+                        <div class="front1">
+                            <i class="fa-brands fa-servicestack Web2"></i>
+                            <h3>Digital Services
+                            </h3>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                        </div>
+                        <div class="back1">
+                            <h4>Digital Services
+                            </h4>
+                            <p>Porem asum molor sit amet, consectetur
+                                <br>adipiscing do miusmod tempor.
+                            </p>
+                            <button class="more"> Read More</button>
+                            <img class="pic3" src="./feature3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ////////////////////////////section 4////////////////////// -->
+
+
+
+    <div class="section4">
+        <div class="textbutton">
+            <div class="text">
+
+                <p> TEAM MEMBER </p>
+                <h1>Our Awesome Creative
+                    <br>Team Member
+                </h1>
+                <div class="linework3">
+                    <div class="lineanimation">
+                        <div class="ring"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonarea">
+                <button class="member"> Veiw All Member</button>
+            </div>
+        </div>
+
+        <div class="animring">
+            <img class="scrola2" src="./about-circle-300x300.png" alt="">
+        </div>
+
+        <!-- /////////////////////Team area//////////////////////// -->
+
+
+        <div class="teampic">
+            <div class="fourpic">
+                <div class="ceo">
+                    <div class="ceohover">
+                        <img class="ceo1" src="./ceo.jpg" alt="">
+                        <div class="blue2"></div>
+                        <div class="boxshow2">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h6>David Malaan</h6>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="director">
+                    <div class="ceohover">
+                        <img class="der1" src="./der.jpg" alt="">
+                        <div class="blue2"></div>
+                        <div class="boxshow2">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h6>Andres Jhohne</h6>
+                        <p>DIRECTOR</p>
+                    </div>
+                </div>
+                <div class="founder">
+                    <div class="ceohover">
+                        <img class="founder1" src="./founder.jpg" alt="">
+                        <div class="blue2"></div>
+                        <div class="boxshow2">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h6>Michel Balak</h6>
+                        <p>FOUNDER</p>
+                    </div>
+                </div>
+                <div class="manager">
+                    <div class="ceohover">
+                        <img class="manag1" src="./manag.jpg" alt="">
+                        <div class="blue2"></div>
+                        <div class="boxshow2">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="team-text">
+                        <h6>Jemes Rodrigez</h6>
+                        <p>MANAGER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ///////////////////five section/////////////////// -->
+
+
+    <div class="section5">
+        <div class="text-area2">
+            <p>FEATURES CASE</p>
+            <h3>Our Latest
+                Case Study<br>
+                For Your Business</h3>
+            <div class="linework3">
+                <div class="lineanimation">
+                    <div class="ring"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="caseagent">
+            <div class="movearea">
+                <div class="c1">
+                    <img class="case2" src="./case2.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+
+                    </div>
+                </div>
+                <div class="c2">
+                    <img class="case7" src="./case7.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+
+                    </div>
+                </div>
+                <div class="c3">
+                    <img class="case3" src="./case3.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+                    </div>
+                </div>
+                <div class="c4">
+                    <img class="case5" src="./case5.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+                    </div>
+                </div>
+                <div class="c2">
+                    <img class="case7" src="./case7.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+                    </div>
+                </div>
+                <div class="c1">
+                    <img class="case2" src="./case2.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+
+                    </div>
+                </div>
+                <div class="c3">
+                    <img class="case3" src="./case3.jpg" alt="">
+                    <div class="blue"></div>
+                    <div class="boxshow1">
+                        <h3>Solution for financial</h3>
+                        <p>Design Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ////////////////////six section/////////////////// -->
+
+    <div class="section6">
+        <div class!="text-line">
+            <p>PROCESS</p>
+            <h3>Our Working Process
+            </h3>
+            <div class="linework5">
+                <div class="lineanimation">
+                    <div class="ring"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="ring3">
+            <div class="allring">
+                <div class="ringa3"></div>
+                <div class="ringa2"></div>
+                <div class="ring1">1</div>
+            </div>
+            <div class="line">
+                <div class="dotline"></div>
+            </div>
+            <div class="allring">
+                <div class="ringa3"></div>
+                <div class="ringa2"></div>
+                <div class="ring1">2</div>
+            </div>
+            <div class="line">
+                <div class="dotline"></div>
+            </div>
+            <div class="allring">
+                <div class="ringa3"></div>
+                <div class="ringa2"></div>
+                <div class="ring1">3</div>
+            </div>
+        </div>
+        <div class="text-line2">
+            <div class="textdata">
+                <h3>Select A Project</h3>
+                <p>We have the technology and industry
+                    <br>expertise to develop solutions that can
+                    <br> connect people and businesses across
+                    <br> variety of mobile devices.
+                </p>
+            </div>
+            <div class="textdata">
+                <h3>Project Analysis</h3>
+                <p>We have the technology and industry
+                    <br>expertise to develop solutions that can
+                    <br> connect people and businesses across
+                    <br> variety of mobile devices.
+                </p>
+            </div>
+            <div class="textdata">
+                <h3>Deliver Result</h3>
+                <p>We have the technology and industry
+                    <br>expertise to develop solutions that can
+                    <br> connect people and businesses across
+                    <br> variety of mobile devices.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////section7//////////////////// -->
+
+    <div class="information">
+        <div class="font ">
+            <p>+880 013 143 206</p>
+            <h3> To Make Requests For The
+                <br> Further Information
+            </h3>
+            <button class="join">JOIN WITH NOW</button>
+        </div>
+        <div class="arrow1">
+            <div class="arrow">
+                <div class="arrowright"></div>
+            </div>
+        </div>
+    </div>
+    <!-- ////////////////////client////////////////// -->
+
+    <div class="client">
+        <div class="clientcount">
+            <div class="client1">
+                <h2>15K</h2>
+                <p>Happy Clients</p>
+
+            </div>
+            <div class="client2">
+                <h2>1280+</h2>
+                <p>Account Number</p>
+            </div>
+            <div class="client3">
+                <h2>10K</h2>
+                <p>Finished Projects</p>
+            </div>
+            <div class="client4">
+                <h2>992+</h2>
+                <p>Win Awards</p>
+            </div>
+        </div>
+        <div class="testimonial">
+            <p>TESTIMONIAL</p>
+            <h3>What Says
+                <br>Our Happy Clients
+            </h3>
+            <div class="monial">
+                <div class="lineanimation">
+                    <div class="ring"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="commint">
+            <div class="commint1">
+                <p>Lorem Ipsum dolor sit amet
+                    <br> consectetur adipiscing elit, sed do
+                    <br> eiusmod tempar incididunt ut labore et
+                    <br> dolore magna aliqua.
+                </p>
+            </div>
+            <div class="commint1">
+                <p>Lorem Ipsum dolor sit amet
+                    <br> consectetur adipiscing elit, sed do
+                    <br> eiusmod tempar incididunt ut labore et
+                    <br> dolore magna aliqua.
+                </p>
+            </div>
+            <div class="commint1">
+                <p>Lorem Ipsum dolor sit amet
+                    <br> consectetur adipiscing elit, sed do
+                    <br> eiusmod tempar incididunt ut labore et
+                    <br> dolore magna aliqua.
+                </p>
+            </div>
+            <div class="commint1">
+                <p>Lorem Ipsum dolor sit amet
+                    <br> consectetur adipiscing elit, sed do
+                    <br> eiusmod tempar incididunt ut labore et
+                    <br> dolore magna aliqua.
+                </p>
+            </div>
+            <div class="clientpic">
+                <div class="clienta1">
+                    <img src="./testi1.jpg" alt="">
+                    <div class="star">
+                        <div class="textstar">
+                            <i class="fa-thin fa-star star1"></i>
+                            <i class="fa-thin fa-star Star2"></i>
+                            <i class="fa-thin fa-star Star3"></i>
+                            <i class="fa-thin fa-star Star4"></i>
+                            <i class="fa-thin fa-star Star5"></i>
+                        </div>
+                        <h3> Jamal Vuiyan</h3>
+                        <p> Develper</p>
+                    </div>
+                </div>
+                <div class="clienta1">
+                    <img src="./testi2.jpg" alt="">
+                    <div class="star">
+                        <div class="textstar">
+                            <i class="fa-thin fa-star star1"></i>
+                            <i class="fa-thin fa-star Star2"></i>
+                            <i class="fa-thin fa-star Star3"></i>
+                            <i class="fa-thin fa-star Star4"></i>
+                            <i class="fa-thin fa-star Star5"></i>
+                        </div>
+                        <h3> Fatima Jahra</h3>
+                        <p> Web Develper</p>
+                    </div>
+                </div>
+                <div class="clienta1">
+                    <img src="./testi3.jpg" alt="">
+                    <div class="star">
+                        <div class="textstar">
+                            <i class="fa-thin fa-star star1"></i>
+                            <i class="fa-thin fa-star Star2"></i>
+                            <i class="fa-thin fa-star Star3"></i>
+                            <i class="fa-thin fa-star Star4"></i>
+                            <i class="fa-thin fa-star Star5"></i>
+                        </div>
+                        <h3> Abraham Jho</h3>
+                        <p> IT Manager</p>
+                    </div>
+                </div>
+                <div class="clienta1">
+                    <img src="./testi1.jpg" alt="">
+                    <div class="star">
+                        <div class="textstar">
+                            <i class="fa-thin fa-star star1"></i>
+                            <i class="fa-thin fa-star star2"></i>
+                            <i class="fa-thin fa-star star3"></i>
+                            <i class="fa-thin fa-star star4"></i>
+                            <i class="fa-thin fa-star star5"></i>
+                        </div>
+                        <h3> Jamal Vuiyan</h3>
+                        <p> Develper</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //////////////////////////Consultancy//////////////////////// -->
+    <div class="Consultancy1">
+        <div class="rollar">
+            <div class="text-consult">
+                <p>GET QUOTE </p>
+                <h3>Make An<br>
+                    Free Consultant</h3>
+                <div class="moniala1">
+                    <div class="lineanimation">
+                        <div class="ring"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="animring2">
+                <img class="scrola3" src="./about-circle.png" alt="">
+            </div>
+        </div>
+        <div class="form1">
+            <input class="namelast" type="text" placeholder="Name">
+            <input class="email1" type="text" placeholder="E-mail">
+            <input class="phone2" type="text" placeholder="Phone">
+            <input class="Website" type="text" placeholder="Website">
+            <textarea class="messanger" name="" id="" cols="30" rows="10" placeholder="YourMassage"></textarea>
+            <button class="apply">Free Consultancy</button>
+        </div>
+    </div>
+    <!-- /////////////////B L O G/////////////////////////////////////////////////// -->
+
+
+    <div class="blog">
+        <div class="bloger">
+            <div class="blogerfont">
+                <p>LATEST ARTICLE</p>
+                <h3> See Our Latest
+                    <br>Blog Posts
+                </h3>
+                <div class="blogline">
+                    <div class="lineanimation">
+                        <div class="ring"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seeblog">
+                <p>See All blogs</p>
+            </div>
+        </div>
+        <div class="blogertext">
+            <div class="blogfirst">
+                <img src="./blog01-390x290.jpg" alt="">
+                <button class="buttontext">WORDPRESS </button>
+                <div class="blogtext">
+                    <p>Tecno October 22,2020</p>
+                    <h3>Convincing reasons you need
+                        <br>to learn
+                    </h3>
+                    <h6>Digital Transformation in Healthcare in
+                        <br> 2022: Lorem ipsum dolor sit amet
+                        <br> consectet
+                    </h6>
+                    <h4>Read More +</h4>
+                </div>
+            </div>
+            <div class="blogfirst">
+                <img src="./blog1-390x290.jpg" alt="">
+                <button class="buttontext">DEVELOPMENT </button>
+                <div class="blogtext">
+                    <p>Tecno October 22,2020</p>
+                    <h3>How can use our latest news
+                        <br>by techno
+                    </h3>
+                    <h6>Digital Transformation in Healthcare in
+                        <br> 2022: Lorem ipsum dolor sit amet
+                        <br> consectet
+                    </h6>
+                    <h4>Read More +</h4>
+                </div>
+            </div>
+            <div class="blogfirst">
+                <img src="./blog4-390x290.jpg" alt="">
+                <button class="buttontext">DESIGN </button>
+                <div class="blogtext">
+                    <p>Tecno October 22,2020</p>
+                    <h3>How to learn PHP to tips to
+
+                        <br>get you started
+                    </h3>
+                    <h6>Digital Transformation in Healthcare in
+                        <br> 2022: Lorem ipsum dolor sit amet
+                        <br> consectet
+                    </h6>
+                    <h4>Read More +</h4>
+                </div>
+            </div>
+            <div class="blogfirst">
+                <img src="./blog06-390x290.jpg" alt="">
+                <button class="buttontext">WORDPRESS </button>
+                <div class="blogtext">
+                    <p>Tecno October 22,2020</p>
+                    <h3>Tiktok Illgally collecting
+                        <br>data sharing
+                    </h3>
+                    <h6>Digital Transformation in Healthcare in
+                        <br> 2022: Lorem ipsum dolor sit amet
+                        <br> consectet
+                    </h6>
+                    <h4>Read More +</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /////////////////////subscribe -->
+    <div class="Subscribe">
+        <h3> Subscibe Our Newsletter</h3>
+        <input class="subscribedata" type="text" placeholder="Enter Your-Email">
+        <button class="subbutton">Subscribe</button>
+    </div>
+    <div class="address">
+        <div class="social">
+            <div class="social1">
+                <img src="./logo2-1.png" alt="">
+
+                <p>Completely strategize client-cent <br>
+                    kPhosfluorescently iterate efficient<br>
+                    internal or organic.</p>
+                <h3>Follow Us</h3>
+                <div class="icon4">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+            </div>
+
+            <div class="social2">
+                <h3>Quick links</h3>
+                <UL>
+                    <LI>Home</LI>
+                    <LI>Abour Us</LI>
+                    <LI>Contact Us</LI>
+                    <LI>Services</LI>
+                    <LI>Our Team</LI>
+                </UL>
+            </div>
+            <div class="social3">
+                <h3>Popular Post</h3>
+                <div class="picadd">
+                    <img src="./blog06-390x290.jpg" alt="">
+                    <div class="addtext">
+                        <h3>Tiktok Illegally collecting<br> data sharing</h3>
+                        <p>October 22, 2020</p>
+                    </div>
+                </div>
+                <div class="picadd2">
+                    <img src="./blog1-390x290.jpg" alt="">
+                    <div class="addtext">
+                        <h3>How can use our latest <br>news by</h3>
+                        <p>October 22, 2020</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social4">
+                <h3>Contact Info</h3>
+                <div class="infoadd">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <h3>Location</h3>
+                    <p>55 Main Street, New York.</p>
+                </div>
+                <div class="infoadd1">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <div class="addtext1">
+                        <h3>EmailUS</h3>
+                        <p>example@gmail.com</p>
+                    </div>
+                </div>
+                <div class="infoadd2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <div class="addtext1">
+                        <h3>Phone US</h3>
+                        <p>+012 (345) 678 99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footertext">
+            <div class="footer1">
+                <p>© 2022 Techno.All Rights Reserved.</p>
+            </div>
+            <div class="footer2">
+                <ul>
+                    <li>Privacy Policy
+                    </li>
+                    <li>Terms & Conditions</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
